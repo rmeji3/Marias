@@ -8,9 +8,11 @@ import Navbar from './components/navbar'
 function App() {
   return (
     <>
-      <Navbar/>
-      <Home/>
-      <Location/>
+      <div className='font-inter'>
+        <Navbar/>
+        <Home/>
+        <Location/>
+      </div>
     </>
   )
 }

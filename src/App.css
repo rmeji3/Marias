@@ -1,8 +1,15 @@
+@import "tailwindcss";
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0 ;
   text-align: center;
+}
+
+body{
+  width: full;
+  margin: 0;
+  background-color: #f0efef;
+  height: 700px;
 }
 
 .logo {
@@ -39,4 +46,8 @@
 
 .read-the-docs {
   color: #888;
+}
+
+ul{
+ display: flex;
 }

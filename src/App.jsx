@@ -4,14 +4,9 @@ import Home from './components/home'
 import './App.css'
 import Navbar from './components/navbar'
 import { Routes, Route, useLocation} from 'react-router-dom';
-import Menu from './pages/menu' // your menu page
+import Menu from './pages/menu'
 import { useRef } from 'react'
-import MenuNavbar from './components/menuNavbar' // your menu-specific navbar
-
-
-
-
-
+import MenuNavbar from './components/menuNavbar'
 
 function App() {
   const location = useLocation();
@@ -44,7 +39,6 @@ function App() {
               </>
             }
           />
-
           {/* Menu page */}
           <Route path="/menu" element={<Menu />} />
         </Routes>

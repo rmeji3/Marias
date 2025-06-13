@@ -1,22 +1,54 @@
-import { useRef } from 'react';
-import Navbar from './components/navbar';
-import Home from './components/home';
-import Location from './components/location';
-import Specials from './components/specials';
-import './App.css';
+import { useState } from 'react'
+import Location from './components/location'
+import Home from './components/home'
+import './App.css'
+import Navbar from './components/navbar'
+import { Routes, Route, useLocation} from 'react-router-dom';
+import Menu from './pages/menu' // your menu page
+import { useRef } from 'react'
+import MenuNavbar from './components/menuNavbar' // your menu-specific navbar
+
+
+
+
+
 
 function App() {
-  const homeRef = useRef(null);
+  const location = useLocation();
+  const isMenuPage = location.pathname === "/menu";
+
   const locationRef = useRef(null);
   const specialsRef = useRef(null);
+  const orderNowRef = useRef(null);
 
   return (
+
     <div className="font-inter">
-      <Navbar homeRef={homeRef} locationRef={locationRef} specialsRef={specialsRef} />
-      <div ref={homeRef}><Home /></div>
-      <div ref={locationRef}><Location /></div>
-      <div ref={specialsRef}><Specials /></div>
-    </div>
+      {/* Conditional navbar */}
+      {isMenuPage ? (
+        <MenuNavbar />
+      ) : (
+        <Navbar
+          locationRef={locationRef}
+          specialsRef={specialsRef}
+          orderNowRef={orderNowRef}
+        />
+      )}
+
+        <Routes>
+          {/* Main page */}
+          <Route path="/" element={
+            <>
+                <Home />
+                <Location locationRef={locationRef} />
+              </>
+            }
+          />
+
+          {/* Menu page */}
+          <Route path="/menu" element={<Menu />} />
+        </Routes>
+      </div>
   );
 }
 

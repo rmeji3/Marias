@@ -1,17 +1,16 @@
 import { useState } from 'react'
 import Location from './components/location'
-import Home from './components/home'
+import Specials from './components/specials'
 import './App.css'
+
+import Home from './components/home'
 import Navbar from './components/navbar'
+import OrderNow from './components/orderNow'
+
 import { Routes, Route, useLocation} from 'react-router-dom';
-import Menu from './pages/menu' // your menu page
+import Menu from './pages/menu'
 import { useRef } from 'react'
-import MenuNavbar from './components/menuNavbar' // your menu-specific navbar
-
-
-
-
-
+import MenuNavbar from './components/menuNavbar'
 
 function App() {
   const location = useLocation();
@@ -20,6 +19,7 @@ function App() {
   const locationRef = useRef(null);
   const specialsRef = useRef(null);
   const orderNowRef = useRef(null);
+
 
   return (
 
@@ -41,10 +41,11 @@ function App() {
             <>
                 <Home />
                 <Location locationRef={locationRef} />
+                <Specials specialsRef={specialsRef}/>
+                <OrderNow orderNowRef={orderNowRef} />
               </>
             }
           />
-
           {/* Menu page */}
           <Route path="/menu" element={<Menu />} />
         </Routes>

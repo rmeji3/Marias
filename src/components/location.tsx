@@ -1,5 +1,5 @@
 import React from "react";
-import Map from "../assets/maps.png";
+import {APIProvider, Map, MapCameraChangedEvent} from '@vis.gl/react-google-maps';
 
 const hours = [
   { day: "Monday", time: "8:00am - 9:00pm" },
@@ -10,6 +10,14 @@ const hours = [
   { day: "Saturday", time: "8:00am - 10:00pm" },
   { day: "Sunday", time: "8:00am - 10:00pm" },
 ];
+
+type Poi ={ key: string, location: google.maps.LatLngLiteral }
+const locations: Poi[] = [
+
+];
+
+const apiKey = "api key" // when there is a key, do not git add or git push or git commit ever please do not please
+
 //todo: add a link to google maps api
 // and add a map that can be interacted with
 // add a phone icon to phone
@@ -19,7 +27,19 @@ const Location = ({locationRef }) => {
       <hr className="w-[320px] h-[1.5px] bg-[#EDEBE8] border-0 lg:w-[1300px]"/>  
       <div className="flex gap-3 flex-col lg:flex-row-reverse lg:justify-around lg:w-full">
         <div className="flex flex-col items-center gap-4">
-          <img src={Map} className="w-[300px] lg:w-[600px]" alt="map"/>
+          {/* <img src={Map} className="w-[300px] lg:w-[600px]" alt="map"/> */}
+          <div className="w-[300px] h-[300px] lg:w-[600px] lg:h-[400px]">
+            <APIProvider apiKey={apiKey}>
+              <Map
+                defaultZoom={18}
+                defaultCenter={{ lat: 41.668346880924766, lng: -87.79721644785289 }}
+                onCameraChanged={(ev: MapCameraChangedEvent) =>
+                  console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
+                }
+              />
+            </APIProvider>
+          </div>
+
           <div className="flex justify-center">
             <div className="items-center">
               <p className="text-left text-sm lg:text-lg">12246 S Harlem Ave <br />

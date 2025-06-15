@@ -137,8 +137,6 @@ function Menu() {
   return (
     <div className="bg-white text-gray-800 p-6 max-w-5xl mx-auto min-h-[3000px] flex flex-col">
       <h1 className="text-4xl font-bold text-center text-[#6B1C27] mb-10">Menu</h1>
-      <p className="text-center text-gray-600 mb-6">Menu component content goes here.</p>
-
       {menuData.map((section, index) => (
         <div key={index} className="mb-8 w-full">
           <h2 className="text-2xl font-semibold border-b-2 border-[#6B1C27] pb-1 mb-4 pl-15 lg:pl-0">{section.section}</h2>

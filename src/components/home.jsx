@@ -1,14 +1,27 @@
 import React from "react";
-// TODO: Add content to the Home component:
-//       Add responsiveness classes for desktop
-//       Add a background image, logo over it
-function Home() {
+import HomeImg from "../assets/placeholder.jpg";
+import logo from "../assets/logobanner.png";
+
+function Home({ homeRef }) {
     return (
-        <div>
+        <div ref={homeRef} className="pb-5">
             <div className="h-[82px]"></div>
-            <h1>Home</h1>
-            <p>Home component content goes here.</p>
+            <div className="relative w-full h-[400px]">
+                <img 
+                    src={HomeImg} 
+                    alt="home image" 
+                    className="w-full h-full object-cover" 
+                />
+                <div className="absolute top-10 left-10 bg-white p-2 rounded-full shadow-lg">
+                    <img 
+                        src={logo} 
+                        alt="logo" 
+                        className="w-70 h-70 object-contain rounded-full "
+                    />
+                </div>
+            </div>
         </div>
     );
 }
+
 export default Home;

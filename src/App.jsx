@@ -20,6 +20,7 @@ function App() {
   const locationRef = useRef(null);
   const specialsRef = useRef(null);
   const orderNowRef = useRef(null);
+  const homeRef = useRef(null);
 
 
   return (
@@ -33,6 +34,7 @@ function App() {
           locationRef={locationRef}
           specialsRef={specialsRef}
           orderNowRef={orderNowRef}
+          homeRef={homeRef}
         />
       )}
 
@@ -40,7 +42,7 @@ function App() {
           {/* Main page */}
           <Route path="/" element={
             <>
-                <Home />
+                <Home homeRef={homeRef}/>
                 <Location locationRef={locationRef} />
                 <Specials specialsRef={specialsRef}/>
                 <OrderNow orderNowRef={orderNowRef} />

@@ -27,17 +27,25 @@ const Location = ({locationRef }) => {
         data => setApiKey(data.key))
   }, []);
 
+  const openMaps = () => {
+    const address = encodeURIComponent("12246 S Harlem Ave Palos Heights, IL 60463");
+    const isApple = /iPhone|iPad|Macintosh/.test(navigator.userAgent);
+    const url = isApple
+      ? `http://maps.apple.com/?q=${address}`
+      : `https://www.google.com/maps/search/?api=1&query=${address}`;
+    window.open(url, "_blank");
+  };
 
   const [infowindowOpen, setInfowindowOpen] = useState(true);
   const [markerRef, marker] = useAdvancedMarkerRef();
 
   return (
-    <div ref ={locationRef} className="flex flex-col w-full gap-3 items-center">
-      <hr className="w-[320px] h-[1.5px] bg-[#EDEBE8] border-0 lg:w-[1300px]"/>  
-      <div className="flex gap-3 flex-col lg:flex-row-reverse lg:justify-around lg:w-full">
+    <div ref ={locationRef} className="flex flex-col w-full gap-3 items-center py-5">
+      <hr className="w-[320px] h-[2px] bg-[#EDEBE8] border-0 lg:w-[1300px] md:w-[800px]"/>  
+      <div className="flex gap-3 flex-col md:flex-row-reverse lg:flex-row-reverse lg:justify-around lg:w-full py-5 md:py-2">
         <div className="flex flex-col items-center gap-4">
           {/* google map api */}
-          <div className="w-[300px] h-[300px] lg:w-[600px] lg:h-[400px]">
+          <div className="border-3 border-[#EDEBE8] w-[300px] h-[200px] lg:w-[650px] lg:h-[300px] md:w-[400px] md:h-[190px]">
 
             {apiKey && (
               <APIProvider apiKey={apiKey}>
@@ -46,9 +54,6 @@ const Location = ({locationRef }) => {
                   defaultZoom={18}
                 disableDefaultUI={true}
                   defaultCenter={{ lat: 41.66835, lng: -87.79722 }}
-                  onCameraChanged={(ev: MapCameraChangedEvent) =>
-                    console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
-                  }
                   className="w-full h-full"
               >
                 <AdvancedMarker
@@ -63,41 +68,41 @@ const Location = ({locationRef }) => {
               </APIProvider>
             )}
           </div>
-          <div className="flex justify-center">
-            <div className="items-center">
-              <p className="text-left text-sm lg:text-lg">12246 S Harlem Ave <br />
+          <div className="flex justify-between w-[300px] lg:w-[650px] md:w-[400px]">
+            <div className="items-center text-sm md:text-m lg:text-lg">
+              <p className="text-left ">12246 S Harlem Ave <br />
                 Palos Heights, IL 60463 <br />
-                <a className="flex gap-2 items-center" href="tel:7085862251">
+                <a className="flex gap-2 items-center hover:text-[#6B1C27]" href="tel:7085862251">
                   (708) 586-2251
                   <CiPhone />
                 </a>
               </p>
             </div>
-            {/* spacer */}
-            <div className="w-[50px] lg:w-[200px]"></div>
             <div className="flex items-end">
               <button className="bg-[#2B2B2B] text-white font-bold text-sm rounded w-[100px] h-[30px] 
-              lg:h-[60px] lg:w-[200px] lg:text-xl cursor-pointer hover:bg-[#6B1C27]">Directions</button>
+              lg:h-[60px] lg:w-[200px] lg:text-xl cursor-pointer hover:bg-[#6B1C27] md:h-[45px] md:w-[130px] md:text-lg"
+              onClick={openMaps}
+              >Directions</button>
             </div>
           </div>
         </div>
-        <div className="w-[320px] h-[1.5px] bg-[#EDEBE8] border-0 lg:bg-[#EDEBE8] lg:h-[400px] lg:w-[1.5px]"></div>
+        <div className="w-[320px] h-[2px] bg-[#EDEBE8] border-0 lg:bg-[#EDEBE8] lg:h-[400px] lg:w-[2px] md:h-[250px] md:w-[2px]"></div>
         <div className="flex">
           <div className="flex flex-col lg:gap-3">
-            <h1 className="text-lg text-[#2B2B2B] text-center font-bold lg:text-4xl">Hours</h1>
+            <h1 className="text-2xl text-[#2B2B2B] text-center font-bold lg:text-4xl md:text-2xl">Hours</h1>
             <div className="flex flex-col lg:gap-2 lg:pt-5">
               {hours.map((entry, index) => (
-              <div key={index} className="flex justify-between w-[300px] text-sm lg:text-2xl">
+              <div key={index} className="flex justify-between w-[300px] text-sm lg:text-2xl text-[#2B2B2B md:text-lg">
                 <span>{entry.day}</span>
                 <span>{entry.time}</span>
               </div>
             ))}
             </div>
-            <p className="text-[7px] lg:pt-5 lg:text-sm">*Hours may vary during holidays</p>
+            <p className="text-[7px] lg:pt-5 text-sm">*Hours may vary during holidays</p>
           </div>
         </div>
       </div>
-      <hr className="w-[320px] h-[1.5px] bg-[#EDEBE8] border-0 lg:w-[1300px]"/>
+      <hr className="w-[320px] h-[2px] bg-[#EDEBE8] border-0 md:w-[800px] lg:w-[1300px]"/>
     </div>
   );
 };

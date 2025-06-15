@@ -6,6 +6,7 @@ import './App.css'
 import Home from './components/home'
 import Navbar from './components/navbar'
 import OrderNow from './components/orderNow'
+import Footer from './components/footer'
 
 import { Routes, Route, useLocation} from 'react-router-dom';
 import Menu from './pages/menu'
@@ -43,11 +44,18 @@ function App() {
                 <Location locationRef={locationRef} />
                 <Specials specialsRef={specialsRef}/>
                 <OrderNow orderNowRef={orderNowRef} />
+                <Footer />
               </>
             }
           />
           {/* Menu page */}
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu" element={
+            <>
+            <Menu /> 
+            <Footer/>
+            </>
+          } 
+          />
         </Routes>
       </div>
   );

@@ -46,7 +46,7 @@ function App() {
           {/* Main page */}
           <Route path="/" element={
             <>
-                <Home />
+                <Home/>
                 <Location locationRef={locationRef} />
                 <Specials specialsRef={specialsRef}/>
                 <OrderNow orderNowRef={orderNowRef} />

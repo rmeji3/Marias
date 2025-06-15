@@ -4,12 +4,10 @@ import { SiUbereats, SiDoordash, SiGrubhub, SiPostmates} from "react-icons/si";
 // TODO:
 // responsiveness classes for desktop
 const logos = [
-    <SiUbereats className="w-14 h-14" />,
-    <SiDoordash className="w-14 h-14" />,
-    <SiGrubhub className="w-14 h-14" />,
-    <SiPostmates className="w-14 h-14" />
-
-
+    <SiUbereats className="w-14 h-14 lg:w-20 lg:h-20" />,
+    <SiDoordash className="w-14 h-14 lg:w-20 lg:h-20" />,
+    <SiGrubhub className="w-14 h-14 lg:w-20 lg:h-20" />,
+    <SiPostmates className="w-14 h-14 lg:w-20 lg:h-20" />
 ];
 const Links = [
     "https://www.ubereats.com/store/marias-tamales-y-champurrado/gRpJE9MeRrehmBkwnpDhhw",
@@ -21,9 +19,9 @@ const Links = [
 function OrderNow({ orderNowRef }) {
     return (
         <div ref={orderNowRef} className="flex flex-col items-center gap-5 pb-5">
-            <hr className="w-[350px] h-[1px] bg-[#EDEBE8] border-0 mx-auto" />
-            <h1 className="text-2xl font-bold">Order Now</h1>
-            <div className="flex flex-wrap gap-5 justify-center">
+            <hr className="w-[350px] h-[1px] bg-[#EDEBE8] border-0 mx-auto lg:w-[1300px]" />
+            <h1 className="text-2xl font-bold lg:text-4xl">Order Now</h1>
+            <div className="flex flex-wrap lg:flex-row gap-5 justify-center lg:w-full">
                 {logos.map((logo, index) => (
                     <OrderBox
                         key={logo.type.name + index}

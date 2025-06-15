@@ -12,9 +12,7 @@ const hours = [
 ];
 
 type Poi ={ key: string, location: google.maps.LatLngLiteral }
-const locations: Poi[] = [
 
-];
 
 const Location = ({locationRef }) => {
   const [apiKey, setApiKey] = useState(null);
@@ -36,7 +34,7 @@ const Location = ({locationRef }) => {
       <div className="flex gap-3 flex-col lg:flex-row-reverse lg:justify-around lg:w-full">
         <div className="flex flex-col items-center gap-4">
           {/* google map api */}
-          <div className="w-[300px] h-[300px] lg:w-[600px] lg:h-[400px]">
+          <div className="w-[240px] h-[240px] lg:w-[600px] lg:h-[400px]">
 
             {apiKey && (
               <APIProvider apiKey={apiKey}>

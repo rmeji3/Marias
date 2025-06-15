@@ -5,22 +5,20 @@ function MenuNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#6B1C27] text-[#fbf7f5] font-montserrat fixed w-full z-50">
-      
-      {/* Top Bar - Only visible on desktop */}
-      <div className="hidden lg:flex items-center justify-between px-4 py-7 h-[82px]">
-        <ul className="flex space-x-8 text-lg font-semibold ml-auto">
-          <li><Link to="/">Home</Link></li>
-        </ul>
-      </div>
-
-      {/* Mobile Hamburger - Only visible on mobile */}
-      <div className="flex lg:hidden items-center px-4 py-7 h-[82px]">
-        <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu" className="flex flex-col space-y-1.5">
-          <span className="block w-6 h-0.5 bg-white"></span>
-          <span className="block w-6 h-0.5 bg-white"></span>
-          <span className="block w-6 h-0.5 bg-white"></span>
-        </button>
+    <nav className="fixed top-0 left-0 h-full w- bg-[#6B1C27] text-[#fbf7f5] z-40 p-6 transition-transform duration-300 ease-in-out lg:w-20">
+      <div className="flex items-center  ]">
+       <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu" className={`transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}>
+        <svg
+           xmlns="http://www.w3.org/2000/svg"
+           className="w-6 h-6 text-white"
+           fill="none"
+           viewBox="0 0 24 24"
+           stroke="currentColor"
+          strokeWidth={2}
+       > 
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+       </button>
       </div>
 
       {/* Mobile Sidebar Menu */}
@@ -33,11 +31,11 @@ function MenuNavbar() {
           />
 
           {/* Sidebar */}
-          <div className="fixed top-0 left-0 h-full w-2/3 bg-[#6B1C27] text-[#fbf7f5] z-40 p-6 transition-transform duration-300 ease-in-out">
+          <div className="fixed top-0 left-0 h-full w-1/3 bg-[#6B1C27] text-[#fbf7f5] z-40 p-6 transition-transform duration-300 ease-in-out lg:w-2/15">
             <ul className="flex flex-col space-y-6 text-lg font-semibold">
               <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-              <li><Link to="/menu" onClick={() => setIsOpen(false)}>Menu</Link></li>
-              <li><Link to="location" onClick={() => setIsOpen(false)}>Location</Link></li>
+              <li><Link to="/menu" onClick={() => setIsOpen(false)}>Dinners</Link></li>
+              <li><Link to="location" onClick={() => setIsOpen(false)}>Plates</Link></li>
               <li><Link to="specials" onClick={() => setIsOpen(false)}>Specials</Link></li>
             </ul>
           </div>

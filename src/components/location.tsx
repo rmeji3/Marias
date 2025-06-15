@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, {useState, useEffect} from "react";
 import {APIProvider, AdvancedMarker, useAdvancedMarkerRef, Map, MapCameraChangedEvent} from '@vis.gl/react-google-maps';
 
 const hours = [
@@ -17,12 +16,16 @@ const locations: Poi[] = [
 
 ];
 
-const apiKey = "api key" // when there is a key, do not git add or git push or git commit ever please do not please
-
-//todo: add a link to google maps api
-// and add a map that can be interacted with
-// add a phone icon to phone
 const Location = ({locationRef }) => {
+  const [apiKey, setApiKey] = useState(null);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/maps-key') // change this when we deploy
+      .then(res => res.json())
+      .then(
+        data => setApiKey(data.key))
+  }, []);
+
 
   const [infowindowOpen, setInfowindowOpen] = useState(true);
   const [markerRef, marker] = useAdvancedMarkerRef();
@@ -32,21 +35,21 @@ const Location = ({locationRef }) => {
       <hr className="w-[320px] h-[1.5px] bg-[#EDEBE8] border-0 lg:w-[1300px]"/>  
       <div className="flex gap-3 flex-col lg:flex-row-reverse lg:justify-around lg:w-full">
         <div className="flex flex-col items-center gap-4">
-          {/* <img src={Map} className="w-[300px] lg:w-[600px]" alt="map"/> */}
+          {/* google map api */}
           <div className="w-[300px] h-[300px] lg:w-[600px] lg:h-[400px]">
 
-            <APIProvider apiKey={apiKey}>
-              <Map
+            {apiKey && (
+              <APIProvider apiKey={apiKey}>
+                <Map
               mapId={'fb58f95f92963648c31d4eb0'}
-                defaultZoom={18}
+                  defaultZoom={18}
                 disableDefaultUI={true}
-                defaultCenter={{ lat: 41.66835, lng: -87.79722 }}
-                onCameraChanged={(ev: MapCameraChangedEvent) =>
-                  console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
-                }
-                className="w-full h-full"
+                  defaultCenter={{ lat: 41.66835, lng: -87.79722 }}
+                  onCameraChanged={(ev: MapCameraChangedEvent) =>
+                    console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
+                  }
+                  className="w-full h-full"
               >
-                {/* eventually try to add a marker? not working for me currently for some reason */}
                 <AdvancedMarker
                   position={{ lat: 41.66835, lng: -87.79722 }}
                   title="My Marker"
@@ -56,9 +59,9 @@ const Location = ({locationRef }) => {
                   }}
                 ></AdvancedMarker>
               </Map>
-            </APIProvider>
+              </APIProvider>
+            )}
           </div>
-
           <div className="flex justify-center">
             <div className="items-center">
               <p className="text-left text-sm lg:text-lg">12246 S Harlem Ave <br />

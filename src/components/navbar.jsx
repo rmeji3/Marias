@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-
 const scrollToSection = (ref, offset = 82) => (e) => {
   e.preventDefault();
   const topPos = ref.current.getBoundingClientRect().top + window.scrollY - offset;

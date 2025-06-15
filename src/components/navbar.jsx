@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-
+// TODO: add logo to top left
+//       Add responsiveness classes for mobile
 const scrollToSection = (ref, offset = 82) => (e) => {
   e.preventDefault();
   const topPos = ref.current.getBoundingClientRect().top + window.scrollY - offset;

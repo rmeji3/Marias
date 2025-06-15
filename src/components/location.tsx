@@ -1,5 +1,6 @@
 import React from "react";
-import {APIProvider, Map, MapCameraChangedEvent} from '@vis.gl/react-google-maps';
+import { useState } from "react";
+import {APIProvider, AdvancedMarker, useAdvancedMarkerRef, Map, MapCameraChangedEvent} from '@vis.gl/react-google-maps';
 
 const hours = [
   { day: "Monday", time: "8:00am - 9:00pm" },
@@ -22,6 +23,10 @@ const apiKey = "api key" // when there is a key, do not git add or git push or g
 // and add a map that can be interacted with
 // add a phone icon to phone
 const Location = ({locationRef }) => {
+
+  const [infowindowOpen, setInfowindowOpen] = useState(true);
+  const [markerRef, marker] = useAdvancedMarkerRef();
+
   return (
     <div ref ={locationRef} className="flex flex-col w-full gap-3 items-center">
       <hr className="w-[320px] h-[1.5px] bg-[#EDEBE8] border-0 lg:w-[1300px]"/>  
@@ -29,14 +34,28 @@ const Location = ({locationRef }) => {
         <div className="flex flex-col items-center gap-4">
           {/* <img src={Map} className="w-[300px] lg:w-[600px]" alt="map"/> */}
           <div className="w-[300px] h-[300px] lg:w-[600px] lg:h-[400px]">
+
             <APIProvider apiKey={apiKey}>
               <Map
+              mapId={'fb58f95f92963648c31d4eb0'}
                 defaultZoom={18}
-                defaultCenter={{ lat: 41.668346880924766, lng: -87.79721644785289 }}
+                disableDefaultUI={true}
+                defaultCenter={{ lat: 41.66835, lng: -87.79722 }}
                 onCameraChanged={(ev: MapCameraChangedEvent) =>
                   console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
                 }
-              />
+                className="w-full h-full"
+              >
+                {/* eventually try to add a marker? not working for me currently for some reason */}
+                <AdvancedMarker
+                  position={{ lat: 41.66835, lng: -87.79722 }}
+                  title="My Marker"
+                  ref={markerRef}
+                  onClick={() => {
+                    setInfowindowOpen(!infowindowOpen);
+                  }}
+                ></AdvancedMarker>
+              </Map>
             </APIProvider>
           </div>
 

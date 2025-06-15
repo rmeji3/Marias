@@ -12,15 +12,15 @@ import { Routes, Route, useLocation} from 'react-router-dom';
 import Menu from './pages/menu'
 import { useRef } from 'react'
 import MenuNavbar from './components/menuNavbar'
+import taco from './components/taco';
 
 function App() {
   const location = useLocation();
   const isMenuPage = location.pathname === "/menu";
-
   const locationRef = useRef(null);
   const specialsRef = useRef(null);
   const orderNowRef = useRef(null);
-  const homeRef = useRef(null);
+  const tacoRef = useRef(null);
 
 
   return (
@@ -28,21 +28,25 @@ function App() {
     <div className="font-inter">
       {/* Conditional navbar */}
       {isMenuPage ? (
-        <MenuNavbar />
+        <MenuNavbar
+          tacoRef={tacoRef}
+          
+          />
       ) : (
         <Navbar
           locationRef={locationRef}
           specialsRef={specialsRef}
           orderNowRef={orderNowRef}
-          homeRef={homeRef}
         />
+
+        
       )}
 
         <Routes>
           {/* Main page */}
           <Route path="/" element={
             <>
-                <Home homeRef={homeRef}/>
+                <Home/>
                 <Location locationRef={locationRef} />
                 <Specials specialsRef={specialsRef}/>
                 <OrderNow orderNowRef={orderNowRef} />
@@ -53,7 +57,7 @@ function App() {
           {/* Menu page */}
           <Route path="/menu" element={
             <>
-            <Menu /> 
+            <Menu tacoRef={tacoRef} /> 
             <Footer/>
             </>
           } 

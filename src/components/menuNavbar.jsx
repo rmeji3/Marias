@@ -14,7 +14,7 @@ function MenuNavbar({tacoRef, soupRef , burritoRef, alacarteRef, breakfastRef,de
   return (
     <nav className="fixed top-0 left-0 h-full w- bg-[#6B1C27] text-[#fbf7f5] z-40 p-6 transition-transform duration-300 ease-in-out lg:w-20">
       <div className="flex items-center  ]">
-       <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu" className={`transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}>
+       <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu" className={`cursor-pointer transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}>
         <svg
            xmlns="http://www.w3.org/2000/svg"
            className="w-6 h-6 text-white"

@@ -1,8 +1,6 @@
 import React from "react";
 import Carousel from "./carousel";
-// TODO: Add content to the Specials component:
-//       carousel with images of specials, text over
-//       Add responsiveness classes for desktop
+
 function Specials({specialsRef}) {
     const specialsText = [
         "Try our new BBQ Chicken Pizza, a perfect blend of smoky and savory flavors!",

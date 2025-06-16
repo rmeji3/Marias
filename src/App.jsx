@@ -1,16 +1,17 @@
-import { useState } from 'react'
+import { useRef, useMemo, createRef  } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom';
+
+import './App.css'
+
 import Location from './components/location'
 import Specials from './components/specials'
-import './App.css'
+import menuData from './data/menu_data.json';
 
 import Home from './components/home'
 import Navbar from './components/navbar'
 import OrderNow from './components/orderNow'
 import Footer from './components/footer'
-
-import { Routes, Route, useLocation } from 'react-router-dom';
 import Menu from './pages/menu'
-import { useRef } from 'react'
 import MenuNavbar from './components/menuNavbar'
 
 function App() {
@@ -23,37 +24,19 @@ function App() {
   const orderNowRef = useRef(null);
   
   // Menu section refs
-  const tacoRef = useRef(null);
-  const alacarteRef = useRef(null);
-  const breakfastRef = useRef(null);
-  const burritoRef = useRef(null);
-  const soupRef = useRef(null);
-  const dessertRef = useRef(null);
-  const sidesRef = useRef(null);
-  const drinksRef = useRef(null);
-  const tamalesRef = useRef(null);
-  const seafoodRef = useRef(null);
-  const saladsRef = useRef(null);
-  const specialtyRef = useRef(null);
+  const sectionRefs = useMemo(() => {
+    const refs = {};
+    menuData.forEach(({ section }) => {
+      refs[section] = createRef();
+    });
+    return refs;
+  }, []);
 
   return (
     <div className="font-inter">
       {/* Conditional navbar */}
       {isMenuPage ? (
-        <MenuNavbar
-          tacoRef={tacoRef}
-          alacarteRef={alacarteRef}
-          breakfastRef={breakfastRef}
-          burritoRef={burritoRef}
-          soupRef={soupRef}
-          dessertRef={dessertRef}
-          sidesRef={sidesRef}
-          drinksRef={drinksRef}
-          tamalesRef={tamalesRef}
-          seafoodRef={seafoodRef}
-          saladsRef={saladsRef}
-          specialtyRef={specialtyRef}
-        />
+         <MenuNavbar sectionRefs={sectionRefs} />
       ) : (
         <Navbar
           locationRef={locationRef}
@@ -77,20 +60,7 @@ function App() {
         {/* Menu page */}
         <Route path="/menu" element={
           <>
-            <Menu 
-              tacoRef={tacoRef}
-              alacarteRef={alacarteRef}
-              breakfastRef={breakfastRef}
-              burritoRef={burritoRef}
-              soupRef={soupRef}
-              dessertRef={dessertRef}
-              sidesRef={sidesRef}
-              drinksRef={drinksRef}
-              tamalesRef={tamalesRef}
-              seafoodRef={seafoodRef}
-              saladsRef={saladsRef}
-              specialtyRef={specialtyRef}
-            /> 
+            <Menu sectionRefs={sectionRefs} />
             <Footer />
           </>
         } />

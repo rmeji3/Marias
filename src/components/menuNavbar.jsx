@@ -8,7 +8,7 @@ const scrollToSection = (ref, offset = 82) => (e) => {
   window.scrollTo({ top: topPos, behavior: 'smooth' });
 };
 
-function MenuNavbar({tacoRef}) {
+function MenuNavbar({tacoRef, soupRef , burritoRef, alacarteRef, breakfastRef,dessertRef, sidesRef, drinksRef, tamalesRef, seafoodRef, saladsRef,specialtyRef}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -41,18 +41,18 @@ function MenuNavbar({tacoRef}) {
           <div className="fixed top-0 left-0 h-full w-1/3 bg-[#6B1C27] text-[#fbf7f5] z-40 p-6 transition-transform duration-300 ease-in-out lg:w-2/15">
             <ul className="flex flex-col space-y-6 text-lg font-semibold">
               <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>A la Carte</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Speciality Dinners</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Taco</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Soups</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Seafood</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Salads</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Side Orders</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Drinks</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Desserts</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Breakfast</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Burritos</a></li>
-              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Tamales</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(alacarteRef)(e);setIsOpen(false);}}>A la Carte</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(specialtyRef)(e);setIsOpen(false);}}>Speciality Dinners</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(tamalesRef)(e);setIsOpen(false);}}>Tamales</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(tacoRef)(e);setIsOpen(false);}}>Tacos</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(burritoRef)(e);setIsOpen(false);}}>Burritos</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(soupRef)(e);setIsOpen(false);}}>Soups</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(seafoodRef)(e);setIsOpen(false);}}>Seafood</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(saladsRef)(e);setIsOpen(false);}}>Salads</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(drinksRef)(e);setIsOpen(false);}}>Drinks</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(sidesRef)(e);setIsOpen(false);}}>Sides & Extras</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(dessertRef)(e);setIsOpen(false);}}>Desserts</a></li>
+              <li><a href="#" onClick={(e) => {scrollToSection(breakfastRef)(e);setIsOpen(false);}}>Breakfast</a></li>
             </ul>
           </div>
         </>

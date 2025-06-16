@@ -12,11 +12,11 @@ function Home() {
                     alt="home image" 
                     className="w-full h-full object-cover" 
                 />
-                <div className="absolute top-8 left-5 lg:top-10 lg:left-10 bg-white lg:p-2 rounded-full shadow-lg">
+                <div className="absolute top-8 left-5 bg-white rounded-full shadow-lg lg:top-10 lg:left-10 lg:p-2">
                     <img 
                         src={logo} 
                         alt="logo" 
-                        className="w-35 h-35 lg:w-70 lg:h-70 object-contain rounded-full "
+                        className="w-35 h-35 object-contain rounded-full lg:w-70 lg:h-70"
                     />
                 </div>
             </div>

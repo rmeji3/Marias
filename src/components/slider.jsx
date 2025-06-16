@@ -21,9 +21,9 @@ export default function SimpleSlider({ images, text }) {
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>
-            <div className="flex flex-col md:flex-row lg:flex-row items-center bg-[#6B1C27] overflow-hidden">
+            <div className="flex flex-col items-center bg-[#6B1C27] overflow-hidden md:flex-row lg:flex-row">
               {/* Text Section */}
-              <div className="w-full md:w-4/10 lg:w-1/3 p-6 text-center">
+              <div className="w-full p-6 text-center md:w-4/10 lg:w-1/3">
                 <p className="text-lg font-semibold text-white md:text-2xl lg:text-2xl">
                   {text[index]}
                 </p>

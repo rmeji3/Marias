@@ -14,7 +14,7 @@ const images = [
 const Carousel = ({text}) => {
   return (
     <div
-      className="flex flex-col lg:flex-row overflow-hidden"
+      className="flex flex-col overflow-hidden lg:flex-row"
     >
       {/* Right: Carousel */}
       <div className="w-full flex flex-col items-center justify-center">

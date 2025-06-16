@@ -5,8 +5,8 @@ const Footer = () => {
     <div className="bg-[#6B1C27] flex flex-col items-center justify-center gap-4 px-4 py-6">
       
       {/* Top Row */}
-      <div className="w-full max-w-[950px] flex flex-col md:flex-row lg:flex-row justify-between items-center gap-4">
-        <div className="text-base lg:text-xl text-[#fbf7f5] font-bold text-center lg:text-left">
+      <div className="w-full max-w-[950px] flex flex-col justify-between items-center gap-4 md:flex-row lg:flex-row">
+        <div className="text-base text-[#fbf7f5] font-bold text-center lg:text-xl lg:text-left">
             Maria's tamales y Champurrado 
         </div>
 
@@ -28,7 +28,7 @@ const Footer = () => {
       <hr className="w-full max-w-[950px] border-t border-[#dbe9e6] bg-[#EDEBE8]" />
 
       {/* Footer */}
-      <div className="w-full max-w-[950px] text-center lg:text-right text-[#fbf7f5] text-xs">
+      <div className="w-full max-w-[950px] text-center text-[#fbf7f5] text-xs lg:text-right">
         <p>© 2025 Leal Enterprises. All rights reserved.</p>
       </div>
     </div>

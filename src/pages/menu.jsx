@@ -12,7 +12,7 @@ const menuData = [
       },
       {
         name: "Sopes",
-        price: "$6.50",
+        price: "$6.50+",
         description: "Choice of meat, beans, lettuce, cheese, tomato, sour cream. Veggie: lettuce, tomato, cheese, beans, rice, avocado, and sour cream."
       },
       {
@@ -22,7 +22,7 @@ const menuData = [
       },
       {
         name: "Nachos Locos",
-        price: "$12.50",
+        price: "$13.75",
         description: "Ground beef, beans, lettuce, nacho cheese and mozzarella, and tomato."
       },
       {
@@ -43,11 +43,11 @@ const menuData = [
     ]
   },
   {
-    section: "Specialty Dinners",
+    section: "Speciality Dinners",
     items: [
       {
         name: "Tampiquena Special Dinner",
-        price: "$20.99",
+        price: "$22.50",
         description: "Skirt steak with cheese enchilada topped with red mild salsa. Served with rice, beans, lettuce, tomato, roasted jalapeño; choice of corn or flour tortillas."
       },
       {
@@ -57,7 +57,7 @@ const menuData = [
       },
       {
         name: "Fajitas Special Dinner",
-        price: "$18.50",
+        price: "$20.00",
         description: "Served with rice, beans, lettuce, tomato, and sour cream."
       },
       {
@@ -67,59 +67,51 @@ const menuData = [
       },
       {
         name: "Chile Relleno Special Dinner",
-        price: "$18.50",
+        price: "$20.00",
         description: "Stuffed pepper with cheese, rice, and beans."
       },
       {
         name: "Enchiladas Special Dinner",
-        price: "$18.50",
+        price: "$20.00",
         description: "Three enchiladas with your choice of meat and sauce."
       },
       {
         name: "Taco Dinner Special Dinner",
-        price: "$16.99",
+        price: "$16.99+",
         description: "Three tacos with rice and beans."
       },
       {
         name: "Milanesa Special Dinner",
-        price: "$18.50",
+        price: "$20.00",
         description: "Breaded steak with rice and beans."
       },
       {
         name: "Carnitas Special Dinner",
-        price: "$18.50",
+        price: "$20.00",
         description: "Slow-cooked pork with rice and beans."
       },
       {
         name: "Chilaquiles con Carne Special Dinner",
-        price: "$18.50",
+        price: "$20.00",
         description: "Tortilla chips cooked in salsa with meat and cheese."
       },
       {
         name: "Flautas Special Dinner",
-        price: "$18.50",
-        description: "Four flautas served with rice, beans, and sour cream."
+        price: "$20.00",
+        description: "Five beef or shredded chicken flautas topped with cheese and sour cream, lettuce, tomato and guacamole on the side. Served with rice and beans."
       },
       {
         name: "Chimichanga Special Dinner",
         price: "$16.99",
         description: "Fried burrito with cheese, sour cream, rice, and beans."
       },
-      {
-        name: "Bistek a la Mexicana Special Dinner",
-        price: "$20.99",
-        description: "Beef cooked with tomato, onion, and jalapeño with rice and beans."
-      },
+      
       {
         name: "Carne Asada Special Dinner",
         price: "$20.99",
         description: "Grilled skirt steak with rice, beans, and tortillas."
       },
-      {
-        name: "Carne Asada con Camarones Special Dinner",
-        price: "$20.99",
-        description: "Skirt steak with shrimp, rice, beans, and tortillas."
-      }
+      
     ]
   },
   {
@@ -136,24 +128,9 @@ const menuData = [
         description: "Rajas con queso. Only available in singles and half dozens."
       },
       {
-        name: "Pineapple Tamale",
-        price: "$3.50",
-        description: "Pina. Only sold in singles."
-      },
-      {
         name: "Red Pork Tamale",
         price: "$3.50",
         description: "Puerco rojo."
-      },
-      {
-        name: "Beans Tamale",
-        price: "$2.50",
-        description: "Frijoles. Only sold in singles."
-      },
-      {
-        name: "Strawberry Tamale",
-        price: "$3.50",
-        description: "Fresa. Only sold in singles."
       },
       {
         name: "Half Dozen Mix Tamale",
@@ -171,39 +148,40 @@ const menuData = [
     section: "Tacos",
     items: [
       {
-        name: "Taco Dinner",
-        price: "$12.25",
-        description: "3 tacos with your choice of meat, served with rice and beans."
+        name: "Veggie Taco",
+        price: "$4.25",
+        description: "Corn or flour tortilla topped with rice, beans, lettuce, tomato, cheese, and avocado."
       },
       {
         name: "Single Taco",
-        price: "$3.75",
+        price: "$4.25",
         description: "Soft tortilla taco with your choice of meat, cilantro, and onions."
       },
       {
-        name: "Hard Shell Taco",
-        price: "$3.00",
-        description: "Crispy taco with lettuce, cheese, and your choice of meat."
+        name: "Chorizo con Huevo Taco",
+        price: "$4.25",
+        description: "Mexican sausage and egg topped with cilantro and onions."
       }
     ]
   },
   {
     section: "Burritos",
     items: [
+      
       {
-        name: "Regular Burrito",
-        price: "$10.75",
-        description: "Flour tortilla filled with beans, cheese, lettuce, tomato, sour cream, and your choice of meat."
+        name: "Burrito",
+        price: "$11.25",
+        description: "Burrito with your choice of meat."
       },
       {
-        name: "Super Burrito",
-        price: "$12.50",
-        description: "Includes all regular burrito ingredients plus avocado and rice."
+        name: "Veggie Burrito",
+        price: "$11.25",
+        description: "Includes rice, beans, lettuce, tomato, cheese, and avocado.."
       },
       {
-        name: "Burrito Bowl",
-        price: "$10.25",
-        description: "All the burrito ingredients served in a bowl instead of a tortilla."
+        name: "Chorizo con Huevo Burrito",
+        price: "$11.25",
+        description: "Mexican sausage and egg with lettuce, tomato, cheese, and beans."
       }
     ]
   },
@@ -303,23 +281,38 @@ const menuData = [
         description: "Traditional Mexican hot chocolate drink."
       },
       {
+        name: "Coffee",
+        price: "$1.50",
+        description: ""
+      },
+      {
         name: "Horchata",
-        price: "$3.00",
+        price: "$3.50",
         description: "Sweet rice milk with cinnamon."
       },
       {
         name: "Jamaica (Hibiscus Tea)",
-        price: "$3.00",
+        price: "$3.50",
         description: "Refreshing tart hibiscus tea."
       },
       {
         name: "Sodas",
-        price: "$2.50",
+        price: "$1.75",
         description: "Coke, Sprite, Fanta, etc."
       },
       {
+        name: "Jarritos",
+        price: "$3.00",
+        description: ""
+      },
+      {
+        name: "Lemonade",
+        price: "$3.50",
+        description: ""
+      },
+      {
         name: "Bottled Water",
-        price: "$1.50",
+        price: "$2.00",
         description: "Purified bottled water."
       }
     ]
@@ -329,27 +322,63 @@ const menuData = [
     items: [
       {
         name: "Rice",
-        price: "$2.50",
+        price: "$3.50",
         description: "Mexican-style rice."
       },
       {
         name: "Beans",
-        price: "$2.50",
-        description: "Refried or whole pinto beans."
+        price: "$3.50",
+        description: "Refried topped with cheese."
       },
       {
         name: "Guacamole",
-        price: "$3.50",
-        description: "Fresh avocado dip."
+        price: "$9.00",
+        description: "8oz dip of avocado, onions, tomatoes, and cilantro. Bag of chips on the side."
       },
       {
         name: "Sour Cream",
-        price: "$1.50",
+        price: "$1.25",
         description: "Side of crema."
       },
       {
+        name: "Pico de Gallo",
+        price: "$2.00",
+        description: "3oz cup of mixed tomato, onions, cilantro and lime juice."
+      },
+      {
+        name: "French Fries",
+        price: "$4.50",
+        description: ""
+      },
+      {
+        name: "Cheese Fries",
+        price: "$5.75",
+        description: "3oz cup of mixed tomato, onions, cilantro and lime juice."
+      },
+      {
+        name: "Carrots and Peppers",
+        price: "$2.00",
+        description: ""
+      },
+      {
+        name: "Cheese Fries with Meat",
+        price: "$8.00",
+        description: "Cheese fries with Steak"
+      }, 
+      {
+        name: "Mexican Potatoes",
+        price: "$6.75",
+        description: "Potatoes with jalapeños, tomatoes, and onions. Choice of corn or flour tortillas."
+      }, 
+      {
+        name: "Corn in a Cup",
+        price: "$4.50",
+        description: "Sweet corn topped with cojita cheese, mayo, butter, and Chile powder."
+      },
+      
+      {
         name: "Chips & Salsa",
-        price: "$3.50",
+        price: "$2.50",
         description: "Fresh tortilla chips with salsa."
       }
     ]
@@ -358,31 +387,108 @@ const menuData = [
     section: "Desserts",
     items: [
       {
-        name: "Flan",
+        name: "Choco-Flan",
         price: "$4.50",
         description: "Classic caramel custard."
       },
       {
-        name: "Tres Leches Cake",
-        price: "$5.00",
+        name: "Homemade Italian Ice Cream",
+        price: "$4.25",
+        description: ""
+      },{
+        name: "Flan",
+        price: "$3.50",
+        description: "Sweet custard with a caramel topping."
+      },
+      {
+        name: "Strawberry Glazed Cheesecake",
+        price: "$4.50",
         description: "Moist sponge cake soaked in three milks."
       },
       {
         name: "Churros",
-        price: "$4.00",
+        price: "$3.00",
         description: "Fried dough pastry with cinnamon sugar."
       }
+    ]
+  },
+  {
+    section: "Breakfast",
+    items: [
+      {
+        name: "Huevos Rancheros Breakfast",
+        price: "$15.00",
+        description: "Three over easy eggs topped with mild red salsa. Served with rice and cheese, choice of corn or flour tortillas. "
+      },
+      {
+        name: "Huevos a la Mexicana Breakfast",
+        price: "$15.00",
+        description: "Scrambled eggs with jalapeños, tomatoes, and onions. Served rice and beans, choice of corn or flour tortillas. "
+      },
+      {
+        name: "Cheese Omelette Breakfast",
+        price: "$15.00",
+        description: "Three egg omelet with cheese. Served with rice and beans, choice of corn or flour tortillas."
+      },
+
+      {
+        name: "Ham and Cheese Omelette Breakfast",
+        price: "$15.00",
+        description: "Three egg omelet with ham and cheese. Served with rice and beans, choice of corn or flour tortillas. "
+      },
+      {
+        name: "Huevos con Jamon Breakfast",
+        price: "$15.00",
+        description: "Scrambled eggs with ham. Served with rice and beans, choice of corn or flour tortillas."
+      },
+      {
+        name: "Huevos con Chorizo Breakfast",
+        price: "$15.00",
+        description: "Three scrambled eggs with Mexican sausage. Served with rice and beans, choice of corn or flour tortillas."
+      },
+      {
+        name: "Chilaquiles con Huevo Breakfast",
+        price: "$15.00",
+        description: "Tortilla strips dipped in a mild red sauce or hot green sauce with three eggs of your choice topped with sour cream, cheese, and onions. Served with rice and beans."
+      },
+      {
+        name: "Huevos con Bistek Breakfast",
+        price: "$15.00",
+        description: "Steak and eggs of your choice, side of tomato and lettuce. Served with rice and beans, choice of corn or flour tortillas."
+      },
     ]
   }
 ];
 
-function Menu({ tacoRef }) {
+function Menu({ 
+  tacoRef, soupRef, burritoRef, alacarteRef, breakfastRef,
+  dessertRef, sidesRef, drinksRef, tamalesRef,
+  seafoodRef, saladsRef, specialtyRef 
+}) {
+  const getRefForSection = (section) => {
+    switch (section) {
+      case "A la Carte": return alacarteRef;
+      case "Tacos": return tacoRef;
+      case "Tamales": return tamalesRef;
+      case "Burritos": return burritoRef;
+      case "Breakfast": return breakfastRef;
+      case "Soups": return soupRef;
+      case "Speciality Dinners": return specialtyRef;
+      case "Seafood": return seafoodRef;
+      case "Salads": return saladsRef;
+      case "Sides & Extras": return sidesRef;
+      case "Desserts": return dessertRef;
+      case "Drinks": return drinksRef;
+      default: return null;
+    }
+  };
+
   return (
     <div className="bg-white text-gray-800 p-6 max-w-5xl mx-auto min-h-[3000px] flex flex-col text-[#2B2B2B]">
       <h1 className="text-4xl font-bold text-center text-[#6B1C27] mb-10">Menu</h1>
       <p className="text-center text-gray-600 mb-6">Authentic Mexican flavors made fresh daily.</p>
       {menuData.map((section, index) => (
-        <div key={index} ref={section.section === "Tacos" ? tacoRef : null} className="mb-8 w-full">         
+        <div key={index} ref={getRefForSection(section.section)} className="mb-8 w-full">
           <h2 className="text-2xl font-semibold border-b-2 border-[#6B1C27] pb-1 mb-4 pl-15 lg:pl-0">{section.section}</h2>
           <ul className="flex flex-col space-y-4 pl-15 lg:pl-0">
             {section.items.map((item, idx) => (

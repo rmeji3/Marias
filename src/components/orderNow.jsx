@@ -20,8 +20,8 @@ function OrderNow({ orderNowRef }) {
     return (
         <div ref={orderNowRef} className="flex flex-col items-center gap-5 pb-10">
             <hr className="w-[350px] h-[2px] bg-[#EDEBE8] border-0 mx-auto md:w-[800px] lg:w-[1300px]" />
-            <h1 className="text-2xl font-bold lg:text-4xl text-[#2B2B2B]">Order Now</h1>
-            <div className="flex flex-wrap lg:flex-row gap-5 justify-center lg:w-full">
+            <h1 className="text-2xl font-bold text-[#2B2B2B] lg:text-4xl">Order Now</h1>
+            <div className="flex flex-wrap gap-5 justify-center lg:flex-row lg:w-full">
                 {logos.map((logo, index) => (
                     <OrderBox
                         key={logo.type.name + index}

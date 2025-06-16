@@ -40,10 +40,10 @@ const Location = ({locationRef }) => {
   return (
     <div ref ={locationRef} className="flex flex-col w-full gap-3 items-center py-5">
       <hr className="w-[320px] h-[2px] bg-[#EDEBE8] border-0 lg:w-[1300px] md:w-[800px]"/>  
-      <div className="flex gap-3 flex-col md:flex-row-reverse lg:flex-row-reverse lg:justify-around lg:w-full py-5 md:py-2">
+      <div className="flex gap-3 flex-col py-5 md:py-2 md:flex-row-reverse lg:flex-row-reverse lg:justify-around lg:w-full ">
         <div className="flex flex-col items-center gap-4">
           {/* google map api */}
-          <div className="border-3 border-[#EDEBE8] w-[300px] h-[200px] lg:w-[650px] lg:h-[300px] md:w-[400px] md:h-[190px]">
+          <div className="border-3 border-[#EDEBE8] w-[300px] h-[200px] md:w-[400px] md:h-[190px] lg:w-[650px] lg:h-[300px]">
 
             {apiKey && (
               <APIProvider apiKey={apiKey}>
@@ -84,13 +84,13 @@ const Location = ({locationRef }) => {
             </div>
           </div>
         </div>
-        <div className="w-[320px] h-[2px] bg-[#EDEBE8] border-0 lg:bg-[#EDEBE8] lg:h-[400px] lg:w-[2px] md:h-[250px] md:w-[2px]"></div>
+        <div className="w-[320px] h-[2px] bg-[#EDEBE8] border-0 md:h-[250px] md:w-[2px] lg:bg-[#EDEBE8] lg:h-[400px] lg:w-[2px]"></div>
         <div className="flex">
           <div className="flex flex-col lg:gap-3">
-            <h1 className="text-2xl text-[#2B2B2B] text-center font-bold lg:text-4xl md:text-2xl">Hours</h1>
+            <h1 className="text-2xl text-[#2B2B2B] text-center font-bold md:text-2xl lg:text-4xl">Hours</h1>
             <div className="flex flex-col lg:gap-2 lg:pt-5">
               {hours.map((entry, index) => (
-              <div key={index} className="flex justify-between w-[300px] text-sm lg:text-2xl text-[#2B2B2B md:text-lg">
+              <div key={index} className="flex justify-between w-[300px] text-sm text-[#2B2B2B] md:text-lg lg:text-2xl">
                 <span>{entry.day}</span>
                 <span>{entry.time}</span>
               </div>

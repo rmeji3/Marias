@@ -67,9 +67,9 @@ function App() {
         <Route path="/" element={
           <>
             <Home />
-            <Location ref={locationRef} />
-            <Specials ref={specialsRef} />
-            <OrderNow ref={orderNowRef} />
+            <Location locationRef ={locationRef} />
+            <Specials specialsRef={specialsRef} />
+            <OrderNow orderNowRef={orderNowRef} />
             <Footer />
           </>
         } />

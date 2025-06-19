@@ -19,17 +19,18 @@ const Location = ({locationRef }) => {
   const [apiKey, setApiKey] = useState<string | null>(null);
 
   useEffect(() => {
-    const cachedKey = localStorage.getItem("googleMapsApiKey");
-    if (cachedKey) {
-      setApiKey(cachedKey);
-    } else {
-      fetch("http://54.84.138.161/api/maps-key")
-        .then(res => res.json())
-        .then(data => {
-          localStorage.setItem("googleMapsApiKey", data.key);
-          setApiKey(data.key);
-        });
-    }
+    // const cachedKey = localStorage.getItem("googleMapsApiKey");
+    // if (cachedKey) {
+    //   setApiKey(cachedKey);
+    // } else {
+    //   fetch("http://54.84.138.161/api/maps-key")
+    //     .then(res => res.json())
+    //     .then(data => {
+    //       localStorage.setItem("googleMapsApiKey", data.key);
+    //       setApiKey(data.key);
+    //     });
+    // }
+    setApiKey("AIzaSyADRplY-6Saulrorfim2bQqxfqE2Na9pfA") //remove this later
   }, []);
   
 

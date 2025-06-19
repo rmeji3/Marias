@@ -23,7 +23,7 @@ const Location = ({locationRef }) => {
     if (cachedKey) {
       setApiKey(cachedKey);
     } else {
-      fetch('http://localhost:3001/api/maps-key')
+      fetch("http://54.84.138.161/api/maps-key")
         .then(res => res.json())
         .then(data => {
           localStorage.setItem("googleMapsApiKey", data.key);

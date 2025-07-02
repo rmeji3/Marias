@@ -1,6 +1,7 @@
 import React from "react";
 import menuData from "../data/menu_data.json";
 
+
 export default function Menu({ sectionRefs }) {
   return (
     <div className="bg-white text-gray-800 p-6 max-w-5xl mx-auto min-h-[3000px] flex flex-col text-[#2B2B2B]">
@@ -10,6 +11,10 @@ export default function Menu({ sectionRefs }) {
       <p className="text-center text-gray-600 mb-6">
         Authentic Mexican flavors made fresh daily.
       </p>
+
+      <br></br>
+
+      <p className ="text-center text-black mb-6 bold">*Prices may vary </p>
 
       {menuData.map(({ section, items }) => (
         <div

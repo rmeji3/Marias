@@ -1,6 +1,7 @@
 import React from "react";
 import HomeImg from "../assets/placeholder.jpg";
 import logo from "../assets/logobanner.png";
+import banner from "../assets/banner.jpg";
 
 function Home() {
     return (
@@ -8,7 +9,7 @@ function Home() {
             <div className="h-[82px]"></div>
             <div className="relative w-full h-[200px] lg:h-[400px]">
                 <img 
-                    src={HomeImg} 
+                    src={banner} 
                     alt="home image" 
                     className="w-full h-full object-cover" 
                 />

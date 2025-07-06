@@ -4,11 +4,16 @@ import pic from '../assets/placeholder.jpg';
 import yard1 from '../assets/logo.png';
 import yard2 from '../assets/logobanner.png';
 import yard3 from '../assets/maps.png';
+import eggs from '../assets/eggs.jpg';
+import burrito from '../assets/burrito.jpg';
+import marg from '../assets/marg.webp';
+import taco from '../assets/taco.jpg';
 
 const images = [
-    yard1,
-    yard2,
-    yard3
+    eggs,
+    taco,
+    burrito,
+    marg
 ]
 
 const Carousel = ({text}) => {

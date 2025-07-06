@@ -7,14 +7,14 @@ export default function Menu({ sectionRefs }) {
     <div className="bg-white text-gray-800 p-6 max-w-5xl mx-auto min-h-[3000px] flex flex-col text-[#2B2B2B]">
       <h1 className="text-4xl font-bold text-center text-[#6B1C27] mb-10">
         Menu
-      </h1>
+      </h1> 
       <p className="text-center text-gray-600 mb-6">
         Authentic Mexican flavors made fresh daily.
       </p>
 
       <br></br>
 
-      <p className ="text-center text-black mb-6 bold">*Prices may vary </p>
+      <p className ="text- text-black mb-6 bold pl-13 lg:pl-0">*Prices may vary on other ordering platforms </p>
 
       {menuData.map(({ section, items }) => (
         <div

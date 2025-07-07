@@ -17,24 +17,24 @@ export default function Menu({ sectionRefs }) {
           ref={sectionRefs[section]}
           className="mb-8 w-full"
         >
-          <h2 className="text-2xl font-semibold border-b-2 border-[#6B1C27] pb-1 mb-4 pl-15 lg:pl-0">
+          <h2 className="text-2xl font-semibold border-b-2 border-[#6B1C27] pb-1 mb-4">
             {section}
           </h2>
-          <ul className="flex flex-col space-y-4 pl-15 lg:pl-0">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {items.map((item, idx) => (
               <li
                 key={idx}
-                className="p-4 border rounded-lg shadow-sm hover:shadow-md transition w-full"
+                className="p-4 border rounded-lg shadow-sm hover:shadow-md transition"
               >
                 <div className="flex justify-between items-start flex-wrap">
-                  <h3 className="text-lg font-bold text-[#6B1C27] w-full sm:w-auto">
+                  <h3 className="text-lg font-bold text-[#6B1C27]">
                     {item.name}
                   </h3>
-                  <span className="text-sm font-semibold text-gray-700 w-full sm:w-auto text-right">
+                  <span className="text-sm font-semibold text-gray-700 text-right">
                     {item.price}
                   </span>
                 </div>
-                <p className="text-sm text-gray-600 mt-1 w-full">
+                <p className="text-sm text-gray-600 mt-1">
                   {item.description}
                 </p>
               </li>

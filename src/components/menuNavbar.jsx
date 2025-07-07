@@ -14,13 +14,13 @@ export default function MenuNavbar({ sectionRefs }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed flex item-center justify-center  top-0 left-[0] w-12 h-12 lg:w-20 lg:h-20 md:w-15 md:h-15 bg-[#6B1C27] text-[#fbf7f5] z-40 p-2 transition-transform duration-300 ease-in-out lg:w-[20] lg:left-0 lg:p-6">
+    <nav className="fixed flex item-center justify-center  top-0 left-0 w-12 h-12 lg:w-20 lg:h-20 md:w-15 md:h-15 bg-[#6B1C27] text-[#fbf7f5] z-40 flex items-center justify-center transition-transform duration-300 ease-in-out">
       <button
         onClick={() => setIsOpen((o) => !o)}
         aria-label="Toggle menu"
-        className={`mb-8 cursor-pointer transition-transform duration-300 ${
+        className={`cursor-pointer transition-transform duration-300 ${
           isOpen ? "rotate-90" : ""
-        } flex items-center justify-center h-full`}
+        } flex items-center justify-center w-20 h-20`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

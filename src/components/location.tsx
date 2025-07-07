@@ -52,7 +52,7 @@ const Location = ({locationRef }) => {
       <div className="flex gap-3 flex-col py-5 md:py-2 md:flex-row-reverse lg:flex-row-reverse lg:justify-around lg:w-full ">
         <div className="flex flex-col items-center gap-4">
           {/* google map api */}
-          <div className="border-3 border-[#EDEBE8] w-[300px] h-[200px] md:w-[400px] md:h-[190px] lg:w-[650px] lg:h-[300px]">
+          <div className="border-3 border-[#EDEBE8] w-[300px] h-[200px] md:w-[400px] md:h-[190px] lg:w-[650px] lg:h-[300px] z-0">
 
             {apiKey && (
               <APIProvider apiKey={apiKey}>

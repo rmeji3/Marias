@@ -4,8 +4,8 @@ import menuData from "../data/menu_data.json";
 
 export default function Menu({ sectionRefs }) {
   return (
-    <div className="bg-white text-gray-800 pl-9.5 max-w-5xl mx-auto min-h-[3000px] flex flex-col text-[#2B2B2B] lg:pl-0">
-      <h1 className="text-4xl font-bold text-center text-[#6B1C27] mb-10">
+    <div className="bg-white my-10 text-gray-800 lg:px-10  max-w-5xl mx-auto min-h-[3000px] flex flex-col items-center text-[#2B2B2B] ">
+      <h1 className="text-4xl font-bold text-center text-[#6B1C27] mb-10 pt-10">
         Menu
       </h1> 
       <p className="text-center text-gray-600 mb-6">

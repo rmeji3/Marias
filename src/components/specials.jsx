@@ -3,9 +3,11 @@ import Carousel from "./carousel";
 
 function Specials({specialsRef}) {
     const specialsText = [
-        "Try our new BBQ Chicken Pizza, a perfect blend of smoky and savory flavors!",
-        "Don't miss out on our limited-time offer: Buy one, get one free on all pasta dishes!",
-        "Introducing our seasonal Pumpkin Spice Latte, a cozy treat for the fall!"
+        "$10 breakfast starting from 8am to 12am, Mon-Fri!",
+        "Taco Tuesday is here! Enjoy single tacos for $2.70!",
+        "Thursday: But one get one 50% off on all burritos!",
+        "Tuesday and Thursday: Enjoy 50% off on all margaritas!",
+        
     ];
     return (
         <div ref={specialsRef} className="flex flex-col py-5">

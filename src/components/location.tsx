@@ -16,14 +16,23 @@ type Poi ={ key: string, location: google.maps.LatLngLiteral }
 
 
 const Location = ({locationRef }) => {
-  const [apiKey, setApiKey] = useState(null);
+  const [apiKey, setApiKey] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/maps-key') // change this when we deploy
-      .then(res => res.json())
-      .then(
-        data => setApiKey(data.key))
+    // const cachedKey = localStorage.getItem("googleMapsApiKey");
+    // if (cachedKey) {
+    //   setApiKey(cachedKey);
+    // } else {
+    //   fetch("http://54.84.138.161/api/maps-key")
+    //     .then(res => res.json())
+    //     .then(data => {
+    //       localStorage.setItem("googleMapsApiKey", data.key);
+    //       setApiKey(data.key);
+    //     });
+    // }
+    setApiKey("AIzaSyADRplY-6Saulrorfim2bQqxfqE2Na9pfA") //remove this later
   }, []);
+  
 
   const openMaps = () => {
     const address = encodeURIComponent("12246 S Harlem Ave Palos Heights, IL 60463");
@@ -43,7 +52,7 @@ const Location = ({locationRef }) => {
       <div className="flex gap-3 flex-col py-5 md:py-2 md:flex-row-reverse lg:flex-row-reverse lg:justify-around lg:w-full ">
         <div className="flex flex-col items-center gap-4">
           {/* google map api */}
-          <div className="border-3 border-[#EDEBE8] w-[300px] h-[200px] md:w-[400px] md:h-[190px] lg:w-[650px] lg:h-[300px]">
+          <div className="border-3 border-[#EDEBE8] w-[300px] h-[200px] md:w-[400px] md:h-[190px] lg:w-[650px] lg:h-[300px] z-0">
 
             {apiKey && (
               <APIProvider apiKey={apiKey}>

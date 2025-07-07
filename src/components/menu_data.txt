@@ -5,7 +5,7 @@ const menuData = [
     items: [
       {
         name: "Tortas A la Carte",
-        price: "$11.25",
+        price: "$12.25",
         description: "Choice of meat, beans, lettuce, cheese, tomato, and sour cream. Veggie option: beans, cheese, lettuce, tomato, rice, and avocado."
       },
       {

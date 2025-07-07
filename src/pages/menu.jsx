@@ -4,8 +4,8 @@ import menuData from "../data/menu_data.json";
 
 export default function Menu({ sectionRefs }) {
   return (
-    <div className="bg-white text-gray-800 pl-9.5 max-w-5xl mx-auto min-h-[3000px] flex flex-col text-[#2B2B2B] lg:pl-0">
-      <h1 className="text-4xl font-bold text-center text-[#6B1C27] mb-10">
+    <div className="bg-white my-10 text-gray-800 lg:px-10  max-w-5xl mx-auto min-h-[3000px] flex flex-col items-center text-[#2B2B2B] ">
+      <h1 className="text-4xl font-bold text-center text-[#6B1C27] mb-10 pt-10">
         Menu
       </h1> 
       <p className="text-center text-gray-600 mb-6">
@@ -20,9 +20,9 @@ export default function Menu({ sectionRefs }) {
   <div
     key={section}
     ref={sectionRefs[section]}
-    className="mb-16 w-full"
+    className="mb-16 w-full flex flex-col items-center "
   >
-    <div className="relative h-48 sm:h-64 w-full mb-6 overflow-hidden rounded-2xl shadow-md">
+    <div className="relative h-48 w-[90%] md:w-[90%] lg:w-full lg:h-80 md:h-70  mb-6 overflow-hidden rounded-2xl shadow-md">
       <img
         src={image}
         alt={section}
@@ -35,11 +35,11 @@ export default function Menu({ sectionRefs }) {
       </div>
     </div>
 
-    <ul className="flex flex-col space-y-4 pl-0">
+    <ul className="flex flex-col items-center space-y-4 pl-0 w-full">
       {items.map((item, idx) => (
         <li
           key={idx}
-          className="p-4 border rounded-lg shadow-sm hover:shadow-md transition w-full bg-white"
+          className="p-4 border rounded-lg shadow-sm hover:shadow-md w-[90%] transition bg-white md:w-[90%] lg:w-full"
         >
           <div className="flex justify-between items-start flex-wrap">
             <h3 className="text-lg font-bold text-[#6B1C27] w-full sm:w-auto">

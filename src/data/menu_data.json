@@ -1,6 +1,7 @@
 [
   {
   "section": "Breakfast",
+  "image": "/images/breakfast.jpg",
   "items": [
     {
       "name": "Huevos Rancheros",
@@ -51,6 +52,7 @@
 },
 {
   "section": "Burritos",
+  "image": "/images/burrito.png",
   "items": [
     {
       "name": "Burrito",
@@ -91,6 +93,7 @@
 },
 {
   "section": "Tacos",
+  "image": "/images/taco.jpg",
   "items": [
     {
       "name": "Regular Taco",
@@ -126,6 +129,7 @@
 },
 {
   "section": "Soups",
+  "image": "/images/soup.jpg",
   "items": [
     {
       "name": "Pozole",
@@ -196,6 +200,7 @@
 },
 {
   "section": "Desserts & Aguas Frescas",
+  "image": "/images/desserts.jpg",
   "items": [
     {
       "name": "Flan",
@@ -311,6 +316,7 @@
 },
 {
   "section": "Specialty Dinners",
+  "image": "/images/speciality.jpg",
   "items": [
     {
       "name": "Fajitas",
@@ -376,6 +382,7 @@
 },
 {
   "section": "Side Orders",
+  "image": "/images/sides.jpg",
   "items": [
     {
       "name": "Rice (Small)",
@@ -486,6 +493,7 @@
 },
 {
   "section": "Drinks",
+  "image": "/images/sodas.jpg",
   "items": [
     {
       "name": "Bottled Soda",

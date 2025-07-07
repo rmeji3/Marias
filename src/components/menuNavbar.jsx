@@ -14,7 +14,7 @@ export default function MenuNavbar({ sectionRefs }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-[0] h-full bg-[#6B1C27] text-[#fbf7f5] z-40 p-6 transition-transform duration-300 ease-in-out lg:w-[20]">
+    <nav className="fixed top-0 left-[0] h-full bg-[#6B1C27] text-[#fbf7f5] z-40 p-2 transition-transform duration-300 ease-in-out lg:w-[20] lg:left-0 lg:p-6">
       <button
         onClick={() => setIsOpen((o) => !o)}
         aria-label="Toggle menu"

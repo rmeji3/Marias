@@ -34,7 +34,7 @@ export default function SimpleSlider({ images, text }) {
                 <img
                   src={image}
                   alt={`Slide ${index}`}
-                  className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] object-cover"
+                  className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[700px] object-cover"
                 />
               </div>
             </div>

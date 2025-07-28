@@ -55,9 +55,10 @@
   "image": "/images/burrito.png",
   "items": [
     {
-      "name": "Burrito",
+      "name": "Burrito ",
       "price": "$10.75",
-      "description": "Includes lettuce, tomato, beans, and cheese. Choice of meat."
+      "description": "Includes lettuce, tomato, beans, and cheese. Choice of meat include steak, chicken, beef, milanesa, chorizo, or chile relleno."
+      
     },
     {
       "name": "Burrito Dinner",
@@ -91,6 +92,25 @@
     }
   ]
 },
+
+{
+  "section": "Tamales",
+  "image": "/images/quesadilla.jpg",
+  "items": [
+    {
+      "name": "Tamales",
+      "price": "$3.00-19.00",
+      "description": "Flavors include chicken w/ Green Salsa, pork w/ Red Salsa, jalapeño with cheese, Single: $3, 1/2 Dozen: $10.50, Dozen: $19. While supplies last."
+    },
+    {
+      "name": "Pineapple and Strawberry Tamales",
+      "price": "$3.00-19.00",
+      "description": "Saturday and Sunday Only. Single: $3, 1/2 Dozen: $10.50, Dozen: $19 . While supplies last."
+    }
+
+  
+  ]
+},
 {
   "section": "Tacos",
   "image": "/images/taco.jpg",
@@ -98,12 +118,12 @@
     {
       "name": "Regular Taco",
       "price": "$3.75",
-      "description": "Choice of meat, topped with onion and cilantro. Handmade tortilla +$0.75"
+      "description": "Topped with onion and cilantro. Handmade tortilla +$0.75. Choice of meat include steak, chicken, beef, milanesa, chorizo, or chile relleno."
     },
     {
       "name": "Fish or Shrimp Taco",
       "price": "$4.25",
-      "description": "Chipotle style with pico de gallo and cabbage."
+      "description": " Topped with onion, cilantro, lettuce, tomato or chiptole style."
     },
     {
       "name": "Birria Taco",
@@ -113,7 +133,7 @@
     {
       "name": "Fajita Taco (Steak/Chicken/Shrimp)",
       "price": "$4.75",
-      "description": "Fajita-style meat in handmade tortilla. Topped with onion and cilantro."
+      "description": "Fajita-style meat Topped with onion and green pepper."
     },
     {
       "name": "Taco Dinner",
@@ -193,8 +213,8 @@
     },
     {
       "name": "Coctel de Camarón",
-      "price": "$6.00 - $12.00",
-      "description": "Shrimp cocktail with avocado, onion, cilantro, tomato, and jalapeños. Served with saltine crackers. Sizes: 16oz ($6), 24oz ($9), 32oz ($12)."
+      "price": "$17.99",
+      "description": "Shrimp cocktail with avocado, onion, cilantro, tomato, and jalapeños. Served with saltine crackers."
     }
   ]
 },
@@ -225,17 +245,17 @@
     {
       "name": "Aguas Frescas",
       "price": "$3.00 - $5.00",
-      "description": "Housemade drinks: Horchata, Jamaica, Lemonade. Flavors include Mango, Strawberry, Watermelon, and Blue Raspberry. Sizes: Small ($3), Medium ($4), Large ($5)."
+      "description": "Housemade drinks: Horchata, Jamaica, Lemonade. Sizes: Small ($3), Medium ($4), Large ($5)."
     },
     {
       "name": "Italian Ice",
       "price": "$4.00",
-      "description": "12oz of Chocolate or Rainbow Sherbet."
+      "description": "Flavors include Mango, Strawberry, Watermelon, and Blue Raspberry."
     },
     {
       "name": "Ice Cream",
       "price": "$4.00",
-      "description": "Cup of creamy frozen dessert (flavors vary)."
+      "description": "12oz of Chocolate or Rainbow Sherbert."
     }
   ]
 },
@@ -477,7 +497,7 @@
     {
       "name": "Combo Meal",
       "price": "$9.75",
-      "description": "Choose 2 items and get rice, beans, and a small drink. Options: Taco (steak, chicken, or beef), Enchilada (red or green, meat or cheese), Flauta (chicken or beef), Tamal (chicken, pork, jalapeño w/ cheese), Cheese Quesadilla (add meat $1)."
+      "description": "Choose 2 items and get rice, beans, and a small drink. Options: Taco (choice of meat), Enchilada (red or green, meat or cheese), Flauta (chicken or beef), Tamal (chicken, pork, jalapeño w/ cheese), Cheese Quesadilla (add meat $1)."
     }
   ]
 },
@@ -495,15 +515,11 @@
   "section": "Drinks",
   "image": "/images/sodas.jpg",
   "items": [
-    {
-      "name": "Bottled Soda",
-      "price": "$2.50",
-      "description": "Includes Pepsi, Diet Pepsi, Cherry Pepsi, Mtn Dew, Diet Mtn Dew, Starry, Root Beer, Grape Crush, Strawberry Crush."
-    },
+
     {
       "name": "Canned Soda",
       "price": "$1.50",
-      "description": "Assorted canned soft drinks."
+      "description": "Includes Pepsi, Diet Pepsi, Cherry Pepsi, Mtn Dew, Diet Mtn Dew, Starry, Root Beer, Grape Crush, Strawberry Crush."
     },
     {
       "name": "Jarritos",
@@ -518,7 +534,7 @@
     {
       "name": "Coca-Cola 0.5L Bottle",
       "price": "$3.00",
-      "description": "Glass Coca-Cola bottle."
+      "description": "Mexican Coke"
     },
     {
       "name": "Coffee",
@@ -528,23 +544,14 @@
     {
       "name": "Pure Leaf Tea",
       "price": "$2.50",
-      "description": "Bottled iced tea."
+      "description": "Sweet or unsweetened tea."
     },
     {
-      "name": "Champurrado (Small)",
-      "price": "$3.00",
-      "description": "Mexican hot chocolate (Small)."
-    },
-    {
-      "name": "Champurrado (Medium)",
-      "price": "$4.00",
-      "description": "Mexican hot chocolate (Medium)."
-    },
-    {
-      "name": "Champurrado (Large)",
-      "price": "$5.00",
-      "description": "Mexican hot chocolate (Large)."
+      "name": "Champurrado ",
+      "price": "$3.00-5.00",
+      "description": "Mexican hot chocolate Small ($3), Medium ($4), Large ($5)."
     }
+    
   ]
 },
 {
@@ -553,12 +560,12 @@
     {
       "name": "Taco Tray",
       "price": "$50.00",
-      "description": "20 tacos with onion & cilantro OR lettuce, tomato, cheese. Chicken, Chorizo, Ground Beef, or Pastor. Includes rice and beans."
+      "description": "20 tacos with onion & cilantro OR lettuce, tomato, cheese. Chicken, Chorizo, Ground Beef, or Pastor."
     },
     {
       "name": "All Steak Taco Tray",
       "price": "$70.00",
-      "description": "20 steak tacos with toppings. Includes rice and beans."
+      "description": "20 steak tacos with toppings."
     },
     {
       "name": "Large Catering Tray",

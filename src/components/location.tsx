@@ -7,9 +7,9 @@ const hours = [
   { day: "Tue", time: "8:00am - 9:00pm" },
   { day: "Wed", time: "8:00am - 9:00pm" },
   { day: "Thu", time: "8:00am - 9:00pm" },
-  { day: "Fri", time: "8:00am - 9:00pm" },
+  { day: "Fri", time: "8:00am - 10:00pm" },
   { day: "Sat", time: "8:00am - 10:00pm" },
-  { day: "Sun", time: "8:00am - 10:00pm" },
+  { day: "Sun", time: "8:00am - 9:00pm" },
 ];
 
 type Poi ={ key: string, location: google.maps.LatLngLiteral }

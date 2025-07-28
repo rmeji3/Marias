@@ -18,9 +18,9 @@ export default function MenuNavbar({ sectionRefs }) {
       <button
         onClick={() => setIsOpen((o) => !o)}
         aria-label="Toggle menu"
-        className={`mb-8 cursor-pointer transition-transform duration-300 ${
+        className={`cursor-pointer transition-transform duration-300 ${
           isOpen ? "rotate-90" : ""
-        } flex items-center justify-center h-full`}
+        } flex items-center justify-center w-20 h-20`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -49,9 +49,19 @@ export default function Menu({ sectionRefs }) {
               {item.price}
             </span>
           </div>
-          <p className="text-sm text-gray-600 mt-1 w-full">
-            {item.description}
-          </p>
+          <div className="flex justify-between items-start flex-wrap">
+
+            <h2 className="text-sm text-gray-600 mt-1 w-full flex-1">
+              {item.description}
+            </h2>
+            <span className="text-sm font-semibold text-gray-700 w-full sm:w-auto text-right">
+                {item.picture ? (
+                  <img src={item.picture} alt={item.name} className="w-12 h-12 object-cover rounded-full" />
+                ) : (
+                  "No Imakjhkjge"
+               )}
+            </span>
+          </div>
         </li>
       ))}
     </ul>

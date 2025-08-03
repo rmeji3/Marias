@@ -58,7 +58,7 @@ export default function Menu({ sectionRefs }) {
                 {item.picture ? (
                   <img src={item.picture} alt={item.name} className="w-12 h-12 object-cover rounded-full" />
                 ) : (
-                  "No Imakjhkjge"
+                  ""
                )}
             </span>
           </div>

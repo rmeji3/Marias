@@ -588,8 +588,7 @@
     {
       "name": "Large Catering Tray",
       "price": "$140.00",
-      "description": "Feeds 40–50 people. Choose from: Rice, Beans, Chicken Fajitas, Steak Fajitas, Bistec a la Mexicana, Carnitas, Al Pastor, Chicken, Ground Beef.",
-      "picture": "src/food_pictures/Large Catering Tray.jpg"
+      "description": "Feeds 40–50 people. Choose from: Rice, Beans, Chicken Fajitas, Steak Fajitas, Bistec a la Mexicana, Carnitas, Al Pastor, Chicken, Ground Beef."
     },
     {
       "name": "Small Catering Tray",

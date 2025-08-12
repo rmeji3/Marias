@@ -11,7 +11,8 @@
     {
       "name": "Huevos a la Mexicana",
       "price": "$13.00",
-      "description": "Scrambled eggs mixed with jalapeños, onions, and tomatoes. Served with rice and beans or hashbrowns, and tortillas."
+      "description": "Scrambled eggs mixed with jalapeños, onions, and tomatoes. Served with rice and beans or hashbrowns, and tortillas.",
+      "picture": "src/food_pictures/Huevos a la Mexicana.jpg"
     },
     {
       "name": "Huevos con Jamón",
@@ -21,17 +22,20 @@
     {
       "name": "Huevos con Chorizo",
       "price": "$13.00",
-      "description": "Scrambled eggs with chorizo. Served with rice and beans or hashbrowns, and tortillas."
+      "description": "Scrambled eggs with chorizo. Served with rice and beans or hashbrowns, and tortillas.",
+      "picture": "src/food_pictures/Huevos con Chorizo.jpg"
     },
     {
       "name": "Huevos con Bistec",
       "price": "$13.00",
-      "description": "Eggs of your choice with skirt steak. Served with rice and beans or hashbrowns, and tortillas."
+      "description": "Eggs of your choice with skirt steak. Served with rice and beans or hashbrowns, and tortillas.",
+      "picture": "src/food_pictures/Huevos con Bistek.jpg"
     },
     {
       "name": "Chilaquiles con Huevo",
       "price": "$13.00",
-      "description": "Tortilla strips sautéed in salsa, topped with onions, cheese, sour cream, and three eggs of your choice."
+      "description": "Tortilla strips sautéed in salsa, topped with onions, cheese, sour cream, and three eggs of your choice.",
+      "picture": "src/food_pictures/Chilaquiles con Huevo.jpg"
     },
     {
       "name": "2 x 2 x 2",
@@ -57,8 +61,8 @@
     {
       "name": "Burrito ",
       "price": "$10.75",
-      "description": "Includes lettuce, tomato, beans, and cheese. Choice of meat include steak, chicken, beef, milanesa, chorizo, or chile relleno."
-      
+      "description": "Includes lettuce, tomato, beans, and cheese. Choice of meat include steak, chicken, beef, milanesa, chorizo, or chile relleno.",
+      "picture": "src/food_pictures/Burrito.jpg"
     },
     {
       "name": "Burrito Dinner",
@@ -68,12 +72,14 @@
     {
       "name": "Wet Burrito",
       "price": "$11.75",
-      "description": "Topped with mild green salsa, sour cream, and guacamole."
+      "description": "Topped with mild green salsa, sour cream, and guacamole.",
+      "picture": "src/food_pictures/Wet Burrito.jpg"
     },
     {
       "name": "Hot Burrito",
       "price": "$11.75",
-      "description": "Topped with hot red salsa, sour cream, and guacamole."
+      "description": "Topped with hot red salsa, sour cream, and guacamole.",
+      "picture": "src/food_pictures/Hot Burrito.jpg"
     },
     {
       "name": "Cheddar Burrito",
@@ -154,12 +160,14 @@
     {
       "name": "Pozole",
       "price": "$13.00",
-      "description": "Pork soup with hominy. Served with cabbage, lime, onion, and jalapeños. Includes tortillas."
+      "description": "Pork soup with hominy. Served with cabbage, lime, onion, and jalapeños. Includes tortillas.",
+      "picture": "src/food_pictures/Pozole.jpg"
     },
     {
       "name": "Caldo de Pollo",
       "price": "$13.00",
-      "description": "Chicken stew with corn, cabbage, squash, carrots, and potato. Side of rice. Includes tortillas."
+      "description": "Chicken stew with corn, cabbage, squash, carrots, and potato. Side of rice. Includes tortillas.",
+      "picture": "src/food_pictures/Caldo de Pollo.jpg"
     },
     {
       "name": "Caldo de Res",
@@ -169,7 +177,8 @@
     {
       "name": "Menudo",
       "price": "$13.00",
-      "description": "Tripe soup with traditional garnishes and tortillas."
+      "description": "Tripe soup with traditional garnishes and tortillas.",
+      "picture": "src/food_pictures/Menudo.jpg"
     },
     {
       "name": "Consome de Chivo",
@@ -192,14 +201,16 @@
       "description": "Grilled shrimp with onions and green peppers. Served with rice, beans, tortillas, sour cream, and avocado."
     },
     {
-      "name": "Fish Fillet",
+      "name": "Fish Fillet Dinner",
       "price": "$17.99",
-      "description": "Breaded tilapia served with sour cream, avocado, rice, beans, and tortillas."
+      "description": "Breaded tilapia served with sour cream, avocado, rice, beans, and tortillas.",
+      "picture": "src/food_pictures/Fish Fillet Dinner.jpg"
     },
     {
       "name": "Caldo de Camarón",
       "price": "$17.99",
-      "description": "Shrimp broth with vegetables and side of rice and tortillas."
+      "description": "Shrimp broth with vegetables and side of rice and tortillas.",
+      "picture": "src/food_pictures/Caldo de Camaron.jpg"
     },
     {
       "name": "Camarones al Chipotle",
@@ -209,12 +220,14 @@
     {
       "name": "Camarones a la Diabla",
       "price": "$17.99",
-      "description": "Shrimp sautéed in red salsa with Valentina, jalapeños, and tomatoes. Served with avocado, lettuce, and sour cream."
+      "description": "Shrimp sautéed in red salsa with Valentina, jalapeños, and tomatoes. Served with avocado, lettuce, and sour cream.",
+      "picture": "src/food_pictures/Camarones a la Diabla.jpg"
     },
     {
       "name": "Coctel de Camarón",
       "price": "$17.99",
-      "description": "Shrimp cocktail with avocado, onion, cilantro, tomato, and jalapeños. Served with saltine crackers."
+      "description": "Shrimp cocktail with avocado, onion, cilantro, tomato, and jalapeños. Served with saltine crackers.",
+      "picture": "src/food_pictures/Shrimp Cocktail.jpg"
     }
   ]
 },
@@ -330,7 +343,8 @@
     {
       "name": "Quesabirrias (Each)",
       "price": "$4.25",
-      "description": "Cheesy birria tacos served with dipping consomé. 3 with consomé: $12.00"
+      "description": "Cheesy birria tacos served with dipping consomé. 3 with consomé: $12.00",
+      "picture": "src/food_pictures/Quesabirrias.jpg"
     }
   ]
 },
@@ -371,17 +385,21 @@
     {
       "name": "Bistec a la Mexicana",
       "price": "$19.99",
-      "description": "Skirt steak sautéed in salsa with onions, tomatoes, jalapeños, and green peppers. Includes sides and tortillas."
+      "description": "Skirt steak sautéed in salsa with onions, tomatoes, jalapeños, and green peppers. Includes sides and tortillas.",
+      "picture": "src/food_pictures/Bistek a la Mexicana.jpg"
     },
     {
       "name": "Carne Asada",
       "price": "$19.99",
-      "description": "Grilled skirt steak with rice, beans, lettuce, tomato, sour cream, avocado, and tortillas."
+      "description": "Grilled skirt steak with rice, beans, lettuce, tomato, sour cream, avocado, and tortillas.",
+      "picture": "src/food_pictures/Carne Asada.jpg"
+    
     },
     {
       "name": "Carne Asada con Camarones",
       "price": "$19.99",
-      "description": "Grilled skirt steak with shrimp. Includes rice, beans, and tortillas."
+      "description": "Grilled skirt steak with shrimp. Includes rice, beans, and tortillas.",
+      "picture": "src/food_pictures/Carne Asada con Camarones.jpg"
     },
     {
       "name": "Tampiqueña",
